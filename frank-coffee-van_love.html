@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Frank's Coffee Van</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #fff8f0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 28px;
+      color: #6b4226;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .wallet {
+      background: #ffffff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+      position: relative;
+    }
+    .wallet label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .wallet input {
+      width: calc(100% - 90px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      border-radius: 4px;
+      background: #f9f9f9;
+    }
+    .wallet button {
+      position: absolute;
+      right: 10px;
+      top: 36px;
+      padding: 8px 12px;
+      background-color: #6b4226;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .social a {
+      display: inline-block;
+      margin: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #6b4226;
+    }
+    .quote {
+      font-style: italic;
+      color: #8b5e3c;
+      margin-top: 20px;
+    }
+    .thanks {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #a86c42;
+    }
+    .crypto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    @media (max-width: 600px) {
+      .crypto-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>☕🚐 Help me build my coffee van</h1>
+  <p>
+    I’m Frank — I lost my business, but not my hope. With your help, I want to start again with a dream: turning a van into a coffee shop to earn a living and give back to the community.
+  </p>
+  <p><strong>🎯 Goal: $150,000 | Raised: $0</strong></p>
+
+  <div class="crypto-grid">
+    <div class="wallet">
+      <label for="usdt">USDT (TON)</label>
+      <input type="text" id="usdt" value="UQBxgaorWWKRliRJZ4h_ts1VqhaTdQob0bQMaouXS4UNAWxI" readonly>
+      <button onclick="copy('usdt')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="btc">Bitcoin</label>
+      <input type="text" id="btc" value="bc1qttcuhr3u47x83tnke48hluhzcm3dl8ctzytaht" readonly>
+      <button onclick="copy('btc')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="eth">Ethereum</label>
+      <input type="text" id="eth" value="0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f" readonly>
+      <button onclick="copy('eth')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="bch">Bitcoin Cash</label>
+      <input type="text" id="bch" value="qpg7xqp8fv3nrehk7zgs7aj67wyvwllxlcgs5f9nqs" readonly>
+      <button onclick="copy('bch')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="doge">Dogecoin</label>
+      <input type="text" id="doge" value="DJJjYxzWh4dvURBs32tYH1Qe6W1XPZYNtd" readonly>
+      <button onclick="copy('doge')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="ftm">Fantom</label>
+      <input type="text" id="ftm" value="0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f" readonly>
+      <button onclick="copy('ftm')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="bnb">BNB</label>
+      <input type="text" id="bnb" value="0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f" readonly>
+      <button onclick="copy('bnb')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="ton">TON</label>
+      <input type="text" id="ton" value="UQAELlWgrJ8_sX4o-uElc2Bj00ME0bkxbTmwLlYDQfu4SeW4" readonly>
+      <button onclick="copy('ton')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="sol">Solana</label>
+      <input type="text" id="sol" value="GLu2BUsam7tyAhTo4c4ACYKMTSYeyqpTxKAb5choDDhV" readonly>
+      <button onclick="copy('sol')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="trx">TRON</label>
+      <input type="text" id="trx" value="TN67UXQbJjoYRZq3nKiYMSCp3KW74VFogJ" readonly>
+      <button onclick="copy('trx')">Copy</button>
+    </div>
+    <div class="wallet">
+      <label for="sui">Sui</label>
+      <input type="text" id="sui" value="0x137f36e13b9bf312a238ca3c3a04c944ace8cda5fad0e9fd8f4c69c5584ab150" readonly>
+      <button onclick="copy('sui')">Copy</button>
+    </div>
+  </div>
+
+  <div class="social">
+    <p><strong>📲 Join the adventure — follow me on Instagram & YouTube!</strong></p>
+    <a href="https://www.instagram.com/cafelifefrank" target="_blank">📸 Instagram</a>
+    <a href="https://www.youtube.com/@cafelifefrank" target="_blank">▶️ YouTube</a>
+  </div>
+
+  <p class="quote">"God loves hands that help more than lips that pray."</p>
+  <p class="thanks">I, Frank, will never forget your kindness. ❤️</p>
+
+  <script>
+    function copy(id) {
+      const input = document.getElementById(id);
+      navigator.clipboard.writeText(input.value)
+        .then(() => alert("Address copied to clipboard!"))
+        .catch(err => alert("Error copying address."));
+    }
+  </script>
+</body>
+</html>
