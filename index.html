@@ -6,200 +6,170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background-color: #f9f6f2;
+      background-color: #f4f3ef;
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 30px;
       color: #333;
     }
-    h1 {
-      font-size: 30px;
+    .header-line {
+      font-size: 24px;
+      font-weight: bold;
       color: #8e44ad;
+      white-space: nowrap;
+      margin-bottom: 20px;
     }
-    h2 {
-      font-size: 18px;
-      color: #555;
-      margin: 10px 0 25px;
-    }
-    .van-photo {
+    img.van-photo {
       max-width: 500px;
       border-radius: 12px;
       margin: 25px auto;
     }
-    .quote {
-      font-size: 15px;
-      font-style: italic;
-      margin: 30px 0;
-      color: #444;
-    }
-    .crypto {
+    .crypto-box {
       background: #fff;
-      border: 1px solid #ddd;
       padding: 20px;
-      max-width: 700px;
-      margin: 0 auto;
       border-radius: 10px;
-    }
-    .crypto h3 {
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: #2c3e50;
+      max-width: 750px;
+      margin: 20px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .crypto-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin: 10px 0;
-      background: #f3f3f3;
-      padding: 8px 12px;
-      border-radius: 6px;
+      flex-wrap: wrap;
     }
     .crypto-item img {
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
     }
-    .crypto-label {
-      display: flex;
-      align-items: center;
+    .crypto-name {
+      flex: 1;
+      text-align: left;
       font-weight: bold;
     }
     .crypto-address {
+      flex: 2;
       font-family: monospace;
       font-size: 14px;
-      overflow-x: auto;
-      flex: 1;
-      margin: 0 10px;
-      text-align: left;
+      word-break: break-word;
     }
     .copy-btn {
-      background: #8e44ad;
-      color: #fff;
-      border: none;
       padding: 5px 10px;
-      border-radius: 6px;
+      background-color: #8e44ad;
+      color: white;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
-    }
-    .copy-btn:hover {
-      background: #6c3483;
     }
     .social {
       margin-top: 30px;
     }
     .social a {
       margin: 0 10px;
-      display: inline-block;
+      text-decoration: none;
     }
     .social img {
-      width: 40px;
-      height: 40px;
-      border-radius: 6px;
+      width: 32px;
+      height: 32px;
     }
-    .footer {
-      font-size: 15px;
+    .thank-you {
       margin-top: 40px;
-      color: #2c3e50;
+      font-style: italic;
+      color: #555;
     }
   </style>
 </head>
 <body>
+  <div class="header-line">Help me build my coffee van</div>
 
-  <h1>☕ Help Me Build My Coffee Van</h1>
-  <h2>I lost my business and need help raising <strong>$178,000</strong> to build my coffee van.</h2>
+  <img class="van-photo" src="https://images.unsplash.com/photo-1607083206173-0c4c3f6e2f2e?auto=format&fit=crop&w=800&q=80" alt="Coffee Van Photo">
 
-  <img src="van-photo.jpg" alt="Coffee van with man beside it" class="van-photo">
+  <div class="crypto-box">
+    <h2>Crypto Support</h2>
 
-  <div class="quote">“God loves hands that help more than lips that pray.”</div>
-
-  <div class="crypto">
-    <h3>💰 Donation Addresses</h3>
-
-    <!-- Start of crypto list -->
+    <!-- USDT -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT">
-        USDT (TON)
-      </div>
-      <div class="crypto-address" id="usdt">UQBxgaorWWKRliRJZ4h_ts1VqhaTdQob0bQMaouXS4UNAWxI</div>
-      <button class="copy-btn" onclick="copyToClipboard('usdt')">Copy</button>
+      <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT">
+      <div class="crypto-name">USDT (TON)</div>
+      <div class="crypto-address" id="addr1">UQBxgaorWWKRliRJZ4h_ts1VqhaTdQob0bQMaouXS4UNAWxI</div>
+      <button class="copy-btn" onclick="copyAddress('addr1')">Copy</button>
     </div>
 
+    <!-- BTC -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="BTC">
-        BTC
-      </div>
-      <div class="crypto-address" id="btc">bc1qttcuhr3u47x83tnke48hluhzcm3dl8ctzytaht</div>
-      <button class="copy-btn" onclick="copyToClipboard('btc')">Copy</button>
+      <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="BTC">
+      <div class="crypto-name">BTC</div>
+      <div class="crypto-address" id="addr2">bc1qttcuhr3u47x83tnke48hluhzcm3dl8ctzytaht</div>
+      <button class="copy-btn" onclick="copyAddress('addr2')">Copy</button>
     </div>
 
+    <!-- ETH -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH">
-        ETH
-      </div>
-      <div class="crypto-address" id="eth">0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</div>
-      <button class="copy-btn" onclick="copyToClipboard('eth')">Copy</button>
+      <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH">
+      <div class="crypto-name">ETH</div>
+      <div class="crypto-address" id="addr3">0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</div>
+      <button class="copy-btn" onclick="copyAddress('addr3')">Copy</button>
     </div>
 
+    <!-- BCH -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/bitcoin-cash-bch-logo.png" alt="BCH">
-        BCH
-      </div>
-      <div class="crypto-address" id="bch">qpg7xqp8fv3nrehk7zgs7aj67wyvwllxlcgs5f9nqs</div>
-      <button class="copy-btn" onclick="copyToClipboard('bch')">Copy</button>
+      <img src="https://cryptologos.cc/logos/bitcoin-cash-bch-logo.png" alt="BCH">
+      <div class="crypto-name">BCH</div>
+      <div class="crypto-address" id="addr4">qpg7xqp8fv3nrehk7zgs7aj67wyvwllxlcgs5f9nqs</div>
+      <button class="copy-btn" onclick="copyAddress('addr4')">Copy</button>
     </div>
 
+    <!-- DOGE -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.png" alt="DOGE">
-        DOGE
-      </div>
-      <div class="crypto-address" id="doge">DJJjYxzWh4dvURBs32tYH1Qe6W1XPZYNtd</div>
-      <button class="copy-btn" onclick="copyToClipboard('doge')">Copy</button>
+      <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.png" alt="DOGE">
+      <div class="crypto-name">DOGE</div>
+      <div class="crypto-address" id="addr5">DJJjYxzWh4dvURBs32tYH1Qe6W1XPZYNtd</div>
+      <button class="copy-btn" onclick="copyAddress('addr5')">Copy</button>
     </div>
 
+    <!-- FTM -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/fantom-ftm-logo.png" alt="FTM">
-        FTM
-      </div>
-      <div class="crypto-address" id="ftm">0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</div>
-      <button class="copy-btn" onclick="copyToClipboard('ftm')">Copy</button>
+      <img src="https://cryptologos.cc/logos/fantom-ftm-logo.png" alt="FTM">
+      <div class="crypto-name">FTM</div>
+      <div class="crypto-address" id="addr6">0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</div>
+      <button class="copy-btn" onclick="copyAddress('addr6')">Copy</button>
     </div>
 
+    <!-- BNB -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="BNB">
-        BNB
-      </div>
-      <div class="crypto-address" id="bnb">0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</div>
-      <button class="copy-btn" onclick="copyToClipboard('bnb')">Copy</button>
+      <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="BNB">
+      <div class="crypto-name">BNB</div>
+      <div class="crypto-address" id="addr7">0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</div>
+      <button class="copy-btn" onclick="copyAddress('addr7')">Copy</button>
     </div>
 
+    <!-- TON -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/toncoin-ton-logo.png" alt="TON">
-        TON
-      </div>
-      <div class="crypto-address" id="ton">UQAELlWgrJ8_sX4o-uElc2Bj00ME0bkxbTmwLlYDQfu4SeW4</div>
-      <button class="copy-btn" onclick="copyToClipboard('ton')">Copy</button>
+      <img src="https://cryptologos.cc/logos/toncoin-ton-logo.png" alt="TON">
+      <div class="crypto-name">TON</div>
+      <div class="crypto-address" id="addr8">UQAELlWgrJ8_sX4o-uElc2Bj00ME0bkxbTmwLlYDQfu4SeW4</div>
+      <button class="copy-btn" onclick="copyAddress('addr8')">Copy</button>
     </div>
 
+    <!-- SOL -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="SOL">
-        SOL
-      </div>
-      <div class="crypto-address" id="sol">GLu2BUsam7tyAhTo4c4ACYKMTSYeyqpTxKAb5choDDhV</div>
-      <button class="copy-btn" onclick="copyToClipboard('sol')">Copy</button>
+      <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="SOL">
+      <div class="crypto-name">SOL</div>
+      <div class="crypto-address" id="addr9">GLu2BUsam7tyAhTo4c4ACYKMTSYeyqpTxKAb5choDDhV</div>
+      <button class="copy-btn" onclick="copyAddress('addr9')">Copy</button>
     </div>
 
+    <!-- TRX -->
     <div class="crypto-item">
-      <div class="crypto-label">
-        <img src="https://cryptologos.cc/logos/tron-trx-logo.png" alt="TRX">
-        TRX
-      </div>
-      <div class="crypto-address" id="trx">TN67UXQbJjoYRZq3nKiYMSCp3KW74VFogJ</div>
-      <button class="copy-btn" onclick="copyToClipboard('trx')">Copy</button
+      <img src="https://cryptologos.cc/logos/tron-trx-logo.png" alt="TRX">
+      <div class="crypto-name">TRX</div>
+      <div class="crypto-address" id="addr10">TN67UXQbJjoYRZq3nKiYMSCp3KW74VFogJ</div>
+      <button class="copy-btn" onclick="copyAddress('addr10')">Copy</button>
+    </div>
+  </div>
+
+  <div class="social">
+    <a href="https://instagram.com"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+    <a href="https://youtube.com"><img src="https://cdn-icons-png.flaticon.com/512/1384/138
