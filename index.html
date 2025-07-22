@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Help Me Build My Coffee Van</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f9f6f2;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+      color: #333;
+    }
+    h1 {
+      font-size: 30px;
+      color: #8e44ad;
+    }
+    h2 {
+      font-size: 18px;
+      color: #555;
+      margin: 10px 0 25px;
+    }
+    .van-photo {
+      max-width: 500px;
+      border-radius: 12px;
+      margin: 25px auto;
+    }
+    .quote {
+      font-size: 15px;
+      font-style: italic;
+      margin: 30px 0;
+      color: #444;
+    }
+    .crypto {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+    .crypto h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+    .crypto-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 0;
+      background: #f3f3f3;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    .crypto-item img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+    .crypto-label {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+    .crypto-address {
+      font-family: monospace;
+      font-size: 14px;
+      overflow-x: auto;
+      flex: 1;
+      margin: 0 10px;
+      text-align: left;
+    }
+    .copy-btn {
+      background: #8e44ad;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background: #6c3483;
+    }
+    .social {
+      margin-top: 30px;
+    }
+    .social a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .social img {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+    }
+    .footer {
+      font-size: 15px;
+      margin-top: 40px;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>☕ Help Me Build My Coffee Van</h1>
+  <h2>I lost my business and need help raising <strong>$178,000</strong> to build my coffee van.</h2>
+
+  <img src="van-photo.jpg" alt="Coffee van with man beside it" class="van-photo">
+
+  <div class="quote">“God loves hands that help more than lips that pray.”</div>
+
+  <div class="crypto">
+    <h3>💰 Donation Addresses</h3>
+
+    <!-- Start of crypto list -->
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="USDT">
+        USDT (TON)
+      </div>
+      <div class="crypto-address" id="usdt">UQBxgaorWWKRliRJZ4h_ts1VqhaTdQob0bQMaouXS4UNAWxI</div>
+      <button class="copy-btn" onclick="copyToClipboard('usdt')">Copy</button>
+    </div>
+
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="BTC">
+        BTC
+      </div>
+      <div class="crypto-address" id="btc">bc1qttcuhr3u47x83tnke48hluhzcm3dl8ctzytaht</div>
+      <button class="copy-btn" onclick="copyToClipboard('btc')">Copy</button>
+    </div>
+
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH">
+        ETH
+      </div>
+      <div class="crypto-address" id="eth">0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</div>
+      <button class="copy-btn" onclick="copyToClipboard('eth')">Copy</button>
+    </div>
+
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/bitcoin-cash-bch-logo.png" alt="BCH">
+        BCH
+      </div>
+      <div class="crypto-address" id="bch">qpg7xqp8fv3nrehk7zgs7aj67wyvwllxlcgs5f9nqs</div>
+      <button class="copy-btn" onclick="copyToClipboard('bch')">Copy</button>
+    </div>
+
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.png" alt="DOGE">
+        DOGE
+      </div>
+      <div class="crypto-address" id="doge">DJJjYxzWh4dvURBs32tYH1Qe6W1XPZYNtd</div>
+      <button class="copy-btn" onclick="copyToClipboard('doge')">Copy</button>
+    </div>
+
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/fantom-ftm-logo.png" alt="FTM">
+        FTM
+      </div>
+      <div class="crypto-address" id="ftm">0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</div>
+      <button class="copy-btn" onclick="copyToClipboard('ftm')">Copy</button>
+    </div>
+
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" alt="BNB">
+        BNB
+      </div>
+      <div class="crypto-address" id="bnb">0x1dddFe02f2Ec2530D0399dfA4e0c12991611e04f</div>
+      <button class="copy-btn" onclick="copyToClipboard('bnb')">Copy</button>
+    </div>
+
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/toncoin-ton-logo.png" alt="TON">
+        TON
+      </div>
+      <div class="crypto-address" id="ton">UQAELlWgrJ8_sX4o-uElc2Bj00ME0bkxbTmwLlYDQfu4SeW4</div>
+      <button class="copy-btn" onclick="copyToClipboard('ton')">Copy</button>
+    </div>
+
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="SOL">
+        SOL
+      </div>
+      <div class="crypto-address" id="sol">GLu2BUsam7tyAhTo4c4ACYKMTSYeyqpTxKAb5choDDhV</div>
+      <button class="copy-btn" onclick="copyToClipboard('sol')">Copy</button>
+    </div>
+
+    <div class="crypto-item">
+      <div class="crypto-label">
+        <img src="https://cryptologos.cc/logos/tron-trx-logo.png" alt="TRX">
+        TRX
+      </div>
+      <div class="crypto-address" id="trx">TN67UXQbJjoYRZq3nKiYMSCp3KW74VFogJ</div>
+      <button class="copy-btn" onclick="copyToClipboard('trx')">Copy</button
